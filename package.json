@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start:backend": "lerna run start --scope=backend",
+    "start:frontend": "lerna run start --scope=frontend",
+    "start": "lerna run start",
+    "test": "lerna run test",
+    "new-verion": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff"
+  }
+}

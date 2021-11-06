@@ -1,0 +1,45 @@
+{
+  "generator-ngx-rocket": {
+    "version": "10.0.0",
+    "props": {
+      "location": "path",
+      "strict": true,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "frontend",
+      "target": [
+        "web"
+      ],
+      "ui": "bootstrap",
+      "features": [
+        "pwa",
+        "auth",
+        "lazy",
+        "e2e"
+      ],
+      "languages": [
+        "en-US",
+        "fr-FR"
+      ],
+      "tools": [
+        "prettier"
+      ],
+      "utility": [
+        "lodash",
+        "moment"
+      ],
+      "deploy": "none",
+      "projectName": "frontend",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": [],
+      "pwa": true,
+      "auth": true,
+      "lazy": true,
+      "e2e": true,
+      "angulartics": false
+    }
+  }
+}

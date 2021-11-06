@@ -1,0 +1,33 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "cross-env NODE_PATH=./src node ./src/app.js",
+    "start:local": "cross-env NODE_PATH=./src nodemon ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.0.1",
+    "graphql-compose": "^9.0.4",
+    "graphql-compose-mongoose": "^9.7.0",
+    "i18next": "^21.4.0",
+    "i18next-express-middleware": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^6.0.12",
+    "validator": "^13.7.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.14"
+  }
+}
