@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -21,15 +20,25 @@
     ],
     "lib": [
       "es2018",
-      "dom"
+      "dom",
+      "esnext.asynciterable"
     ],
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@shared": ["src/app/@shared"],
-      "@shared/*": ["src/app/@shared/*"],
-      "@env/*": ["src/environments/*"]
-    }
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@shared": [
+        "src/app/@shared"
+      ],
+      "@shared/*": [
+        "src/app/@shared/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

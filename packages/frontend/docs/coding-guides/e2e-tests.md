@@ -46,13 +46,13 @@ If the UI changes, the fix only needs to be applied in one place.
 #### How to define a page object
 
 ```typescript
-// login.po.ts
+// sign-in.po.ts
 import { browser, element, by } from 'protractor';
 
 export class LoginPage {
   emailInput = element(by.css('input[name=^"email"]'));
   passwordInput = element(by.css('input[name=^"password"]'));
-  loginButton = element(by.css('button[(click)^="login"]'));
+  loginButton = element(by.css('button[(click)^="sign-in"]'));
   registerButton = element(by.css('button[(click)^="register"]'));
 
   async navigateTo() {
@@ -68,8 +68,8 @@ export class LoginPage {
 #### How to use a page object
 
 ```typescript
-// login.e2e-spec.ts
-import { LoginPage } from './login.po';
+// sign-in.e2e-spec.ts
+import { LoginPage } from './sign-in.po';
 
 describe('Login', () => {
   let page: LoginPage;

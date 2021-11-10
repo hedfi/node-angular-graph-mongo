@@ -7,7 +7,7 @@ import { filter, map, switchMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { Logger, UntilDestroy, untilDestroyed } from '@shared';
-import { I18nService } from '@app/i18n';
+import { I18nService } from '@app/@services/i18n.service';
 
 const log = new Logger('App');
 

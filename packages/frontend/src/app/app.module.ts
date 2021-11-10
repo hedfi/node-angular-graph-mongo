@@ -8,12 +8,21 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { environment } from '@env/environment';
-import { RouteReusableStrategy, ApiPrefixInterceptor, ErrorHandlerInterceptor, SharedModule } from '@shared';
-import { AuthModule } from '@app/auth';
+import {
+  RouteReusableStrategy,
+  ApiPrefixInterceptor,
+  ErrorHandlerInterceptor,
+  SharedModule,
+  JwtInterceptor,
+} from '@shared';
+import { SignInModule } from './sign-in/sign-in.module';
+import { SignUpModule } from './sign-up/sign-up.module';
 import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { GraphQLModule } from './graphql.module';
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   imports: [
@@ -22,19 +31,27 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpClientModule,
     RouterModule,
+    NotifierModule,
     TranslateModule.forRoot(),
     NgbModule,
     SharedModule,
     ShellModule,
     HomeModule,
-    AuthModule,
-    AppRoutingModule, // must be imported as the last module as it contains the fallback route
+    SignInModule,
+    SignUpModule,
+    AppRoutingModule,
+    GraphQLModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiPrefixInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
       multi: true,
     },
     {

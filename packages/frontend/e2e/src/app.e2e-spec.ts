@@ -12,8 +12,8 @@ describe('when the app loads', () => {
     await app.navigateAndSetLanguage();
   });
 
-  it('should display the login page', async () => {
-    expect(await browser.getCurrentUrl()).toContain('/login');
+  it('should display the sign-in page', async () => {
+    expect(await browser.getCurrentUrl()).toContain('/sign-in');
   });
 
   describe('and the user logs in', () => {

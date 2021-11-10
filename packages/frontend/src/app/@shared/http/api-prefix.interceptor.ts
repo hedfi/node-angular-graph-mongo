@@ -15,6 +15,7 @@ export class ApiPrefixInterceptor implements HttpInterceptor {
     if (!/^(http|https):/i.test(request.url)) {
       request = request.clone({ url: environment.serverUrl + request.url });
     }
+
     return next.handle(request);
   }
 }
